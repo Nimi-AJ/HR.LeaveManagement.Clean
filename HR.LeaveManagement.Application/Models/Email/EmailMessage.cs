@@ -12,6 +12,8 @@ namespace HR.LeaveManagement.Application.Models.Email
 
         public string From { get; set; }
 
-        public string Body { get; s }
+        public string Subject { get; set; }
+
+        public string Body { get; set; }
     }
 }

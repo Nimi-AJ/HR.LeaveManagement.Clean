@@ -30,8 +30,6 @@ namespace HR.LeaveManagement.Infrastructure.EmailService
             var message = MailHelper.CreateSingleEmail(from, to, email.Subject, email.Body, email.Body);
 
             var response = await client.SendEmailAsync(message);
-
-
             return response.IsSuccessStatusCode;
         }
     }

@@ -15,11 +15,13 @@ namespace HR.LeaveManagement.Persistence
             {
                 options.UseSqlServer(configuration.GetConnectionString("HrDatabaseConnectiongString"));
 
-                services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-                services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
-                services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
+               
 
             });
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
+            services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
+            services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
             return services;
         }
     }
